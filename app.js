@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 //app.get("/favicon.ico", () => {});
-mongoose.connect("mongodb+srv://admin-amruth:pass@cluster0.24vkt.mongodb.net/todolistDB", {useNewUrlParser: true ,useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admin-amruth:test123@cluster0.24vkt.mongodb.net/todolistDB", {useNewUrlParser: true ,useUnifiedTopology: true});
 
 const itemsSchema = {
   name: String

@@ -12,7 +12,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 //app.get("/favicon.ico", () => {});
-mongoose.connect("mongodb+srv://admin-amruth:test123@cluster0.24vkt.mongodb.net/todolistDB", {useNewUrlParser: true ,useUnifiedTopology: true});
+mongoose.connect("mongodb+srv://admin-amruth:password@cluster0.24vkt.mongodb.net/todolistDB", {useNewUrlParser: true ,useUnifiedTopology: true});
 
 const itemsSchema = {
   name: String
@@ -33,7 +33,11 @@ const item3 = new Item({
   name: "<-- Hit this to delete an item."
 });
 
-const defaultItems = [item1, item2, item3];
+const item4 = new Item({
+  name: "Can add other multiple list by adding /customname to url"
+});
+
+const defaultItems = [item1, item2, item3,item4];
 
 const listSchema = {
   name: String,

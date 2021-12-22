@@ -34,7 +34,7 @@ const item3 = new Item({
 });
 
 const item4 = new Item({
-  name: "Can add other multiple list by adding /customname to url"
+  name: "Can add your custom list by adding /customname to url"
 });
 
 const defaultItems = [item1, item2, item3,item4];
@@ -56,7 +56,7 @@ app.get("/", function(req, res) {
         if (err) {
           console.log(err);
         } else {
-          console.log("Successfully savevd default items to DB.");
+          console.log("Successfully saved default items to DB.");
         }
       });
       res.redirect("/");
